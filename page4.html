@@ -1,0 +1,106 @@
+<!DOCTYPE html>  
+<html lang="en">  
+  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>关于我们</title>  
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <link rel="stylesheet" href="/css/pic.css">  
+</head>  
+  
+<body>  
+    
+    <div class="container">  
+        <div id="slide">  
+            <div class="item" style="background-image: url(img/p2.png)">  
+                <div class="content">  
+                    <div class="name">刘红娟</div>  
+                    <div class="des">这里是一些描述，你可以写一些相关描述</div>  
+                    <div class="icon_box">  
+                        <lord-icon src="https://cdn.lordicon.com/vixtkkbk.json" trigger="hover" class="icon">  
+                        </lord-icon>  
+                    </div>  
+                    <button>更多内容</button>  
+                </div>  
+            </div>  
+            <div class="item" style="background-image: url(img/p6.png);">  
+                <div class="content">  
+                    <div class="name">这里是标题</div>  
+                    <div class="des">这里是一些描述，你可以写一些相关描述</div>  
+                    <div class="icon_box">  
+                        <lord-icon src="https://cdn.lordicon.com/vixtkkbk.json" trigger="hover" class="icon">  
+                        </lord-icon>  
+                    </div>  
+                    <button>更多内容</button>  
+                </div>  
+            </div>  
+            <div class="item" style="background-image: url(img/p7.png);">  
+                <div class="content">  
+                    <div class="name">这里是标题</div>  
+                    <div class="des">这里是一些描述，你可以写一些相关描述</div>  
+                    <div class="icon_box">  
+                        <lord-icon src="https://cdn.lordicon.com/vixtkkbk.json" trigger="hover" class="icon">  
+                        </lord-icon>  
+                    </div>  
+                    <button>更多内容</button>  
+                </div>  
+            </div>  
+            <div class="item" style="background-image: url(img/p4.JPG);">  
+                <div class="content">  
+                    <div class="name">这里是标题</div>  
+                    <div class="des">这里是一些描述，你可以写一些相关描述</div>  
+                    <div class="icon_box">  
+                        <lord-icon src="https://cdn.lordicon.com/vixtkkbk.json" trigger="hover" class="icon">  
+                        </lord-icon>  
+                    </div>  
+                    <button>更多内容</button>  
+                </div>  
+            </div>  
+            <div class="item" style="background-image: url(img/p5.JPG);">  
+                <div class="content">  
+                    <div class="name">这里是标题</div>  
+                    <div class="des">这里是一些描述，你可以写一些相关描述</div>  
+                    <div class="icon_box">  
+                        <lord-icon src="https://cdn.lordicon.com/vixtkkbk.json" trigger="hover" class="icon">  
+                        </lord-icon>  
+                    </div>  
+                    <button>更多内容</button>  
+                </div>  
+            </div>  
+        </div>  
+        <div class="buttons">  
+            <div class="s_button"><</div>  
+            <div class="s_button">></div>  
+        </div>  
+    </div>  
+    <script>  
+        let _direction = true;  
+        let _move = () => {  
+            let lists = document.querySelectorAll(".item")  
+            if (_direction) {  
+                document.querySelector("#slide").appendChild(lists[0]);  
+            } else {  
+                document.querySelector("#slide").prepend(lists[lists.length - 1]);  
+            }  
+        }  
+        let timer = setInterval(_move, 2500);  
+        document.querySelector(".container").addEventListener("mouseover", () => {  
+            clearInterval(timer);  
+        });  
+        document.querySelector(".container").addEventListener("mouseout", () => {  
+            timer = setInterval(_move, 2500)  
+        });  
+        document.querySelectorAll(".s_button")[1].onclick = () => {  
+            _direction = true;  
+            _move();  
+        }  
+        document.querySelectorAll(".s_button")[0].onclick = () => {  
+            _direction = false;  
+            _move();  
+        }  
+    </script>  
+</body>  
+  
+</html>  

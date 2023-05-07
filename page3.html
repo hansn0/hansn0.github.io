@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>旅游指南(未去过)</title>
-    <link rel="stylesheet" href="/css/style.css"/><!--引入css-->
+    <link rel="stylesheet" href="/css/style.css" /><!--引入css-->
 </head>
 
 <body>
@@ -15,36 +15,61 @@
                 <ul>
                     <li><a href="index.html">首页</a></li>
                     <li><a href="page2.html">已到达</a></li>
-                    <li><a href="page3.html">未到达</a></li>
+                    <li><a class="current" href="page3.html">未到达</a></li>
+                    <li><a href="about.html">联系我们</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <h2 align="center",style="display: inline;" >下列为暂未旅游的地点记录</h2>
-<table width = "600" style="font-size: 30px;">
-    <tr>
-        <td>地点一</td>
-        <td>地点二</td>
-        <td>地点三</td>
-    </tr> 
-    <tr>
-        <td>云南 · 大理</td>
-        <td>湖南 · 长沙</td>
-        <td>湖北 · 恩施</td>
-    </tr>
-</table></h2>
-    </div>
-<br/>
-<br/>
-<br/>
-<div><b>
-<p>还有想去的地方？</p>
-<p>点击下列投递！！！</p></b>
-<textarea placeholder="在这里输入您的建议..."></textarea>
-<br/>
-<input type="checkbox" size="500">我已知晓旅行指南并同意
-<br/>
-<input type="submit" value="提交" size="50">
-</div>
+    <section id="contact-form">
+        <div class="container">
+            <table>
+                <tr>
+                    <td>地点一</td>
+                    <td>地点二</td>
+                    <td>地点三</td>
+                </tr>
+                <tr>
+                    <td><a href="https://yn02.ynlj66.cn/0nrhtzxroek3/index.html?bd_vid=11773611825042982723&kf_uid=52881&kf_uid2=30097&kf_n=xiaoyang">云南 · 大理</a></td>
+                    <td><a href="https://www.mafengwo.cn/gonglve/ziyouxing/337132.html">湖南 · 长沙</a></td>
+                    <td><a href="http://fc.ycgjly.com/ftro7aoim1wt/index.html?keyword=%E6%83%B3%E5%8E%BB%E6%B9%96%E5%8C%97%7B%E6%81%A9%E6%96%BD%7D%E6%97%85%E6%B8%B8%E6%94%BB%E7%95%A5&plan=%E6%81%A9%E6%96%BD-NT&unit=%E6%81%A9%E6%96%BD%2B%E6%94%BB%E7%95%A5&e_matchtype=2&e_creative=71934008199&e_adposition=cl1&e_pagenum=1&e_keywordid=575057798113&e_keywordid2=575057798113&bd_vid=11996801230858825157&kf_uid=32073&kf_uid2=25446&kf_n=xiaoman">湖北 · 恩施</a></td>
+                </tr>
+            </table>
+            <br />
+            <br />
 
+            <h1>有<span class="text-primary">其他地点</span>联系我们</h1>
+            <p>欢迎填入你想去的地点！</p>
+            <form action="process.php">
+                <div class="form-group">
+                    <label for="name">省份</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="where">市区</label>
+                    <input type="text" name="where" id="where">
+                </div>
+                <div class="form-group">
+                    <label for="message">建议</label>
+                    <textarea type="text" name="message" id="message"></textarea>
+                </div>
+                <button type="submit" class="btn">提交</button>
+            </form>
+        </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer id="main-footer">
+        <p>Hansn指南 &copy; 2023, All Rights Reserved</p>
+    </footer>
+</body>
 
+</html>
